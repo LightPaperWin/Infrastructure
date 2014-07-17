@@ -39,7 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\DocumentInterfaces.cs" />
+    <Compile Include="Contracts\IQuickOptionView.cs" />
+    <Compile Include="Contracts\IUserConfirmer.cs" />
+    <Compile Include="Contracts\SessionInterfaces.cs" />
+    <Compile Include="MagicStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Puppy\Puppy\Puppy.csproj">
+      <Project>{4846c908-43ff-4b93-a82a-8f424894e18b}</Project>
+      <Name>Puppy</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
