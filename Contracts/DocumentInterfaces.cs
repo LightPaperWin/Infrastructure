@@ -22,8 +22,7 @@ namespace LightPaper.Infrastructure.Contracts
         bool IsDirty { get; }
         bool IsTransient { get; set; }
         string SourcePath { get; }
-
-        void Save(string filename);
+        bool Save();
 
         #endregion
     }
@@ -39,9 +38,16 @@ namespace LightPaper.Infrastructure.Contracts
         ObservableCollection<IDocument> WorkingDocuments { get; }
         IDocument CurrentDocument { get; }
         bool Add(IDocument document, bool doSelect = false);
+        void AddFromPaths(IEnumerable<string> filePaths);
         Task CloseCurrentAsync();
         Task CloseAsync(IDocument document);
         void SaveAllWorkingDocuments();
         void PruneTransientDocuments();
+    }
+
+    public interface IDocumentFactory
+    {
+        IDocument CreateFromPath(string path);
+        IDocument CreateEmptyDocument();
     }
 }

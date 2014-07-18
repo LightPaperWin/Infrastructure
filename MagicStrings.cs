@@ -2,7 +2,7 @@
 {
     public class MagicStrings
     {
-        #region Nested type: LoggerTags
+        #region LoggerTags
 
         public static class LoggerTags
         {
@@ -13,7 +13,7 @@
 
         #endregion
 
-        #region Nested type: MarkdownTags
+        #region MarkdownTags
 
         public static class MarkdownTags
         {
@@ -32,7 +32,7 @@
 
         #endregion
 
-        #region Nested type: RegionNames
+        #region RegionNames
 
         public static class RegionNames
         {
@@ -48,7 +48,7 @@
 
         #endregion
 
-        #region Nested type: SettingsKey
+        #region SettingsKey
 
         public static class SettingsKey
         {
@@ -57,14 +57,24 @@
 
         #endregion
 
-        #region Nested type: SpecialNames
+        #region PathNames
 
-        public static class SpecialNames
+        public static class PathNames
         {
             public static readonly string APP_FOLDER_NAME = "LightPaper";
             public static readonly string PLUGINS_FOLDER_NAME = "Plugins";
             public static readonly string MODULES_FOLDER_NAME = "Modules";
             public static readonly string THEMES_FOLDER_NAME = "Themes";
+        }
+
+        #endregion
+
+        #region ExportContractNames
+
+        public static class ExportContractNames
+        {
+            public const string DEFAULT_SESSION_MANAGER = "DefaultSessionManager";
+            public const string MARKDOWN_DOCUMENT_FACTORY = "MarkdownDocumentFactory";
         }
 
         #endregion
