@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using PuppyFramework;
 
 #endregion
 
@@ -27,12 +28,6 @@ namespace LightPaper.Infrastructure.Contracts
         #endregion
     }
 
-    public interface IDocumentCloseConfirmer
-    {
-        Task<bool?> DocumentShouldCloseAsync(IDocument document);
-        Task<bool?> DocumentsShouldCloseAsync(IEnumerable<IDocument> documents);
-    }
-
     public interface IDocumentsManager
     {
         ObservableCollection<IDocument> WorkingDocuments { get; }
@@ -43,6 +38,7 @@ namespace LightPaper.Infrastructure.Contracts
         Task CloseAsync(IDocument document);
         void SaveAllWorkingDocuments();
         void PruneTransientDocuments();
+        Task<UserPromptResult> CloseAllAsync();
     }
 
     public interface IDocumentFactory

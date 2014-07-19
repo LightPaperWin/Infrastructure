@@ -7,8 +7,9 @@ using PuppyFramework;
 
 namespace LightPaper.Infrastructure.Contracts
 {
-    public interface IUserConfirmer
+    public interface IUserInteraction
     {
         Task<UserPromptResult> ConfirmSaveAsync(IDocument document);
+        Task<string> PromptInputAsync(string title, string message = null);
     }
 }
