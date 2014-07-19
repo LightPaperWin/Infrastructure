@@ -93,6 +93,7 @@
     <Compile Include="Contracts\ViewInterfaces.cs" />
     <Compile Include="Contracts\IUserInteraction.cs" />
     <Compile Include="Contracts\SessionInterfaces.cs" />
+    <Compile Include="Events\Events.LightPaper.Documents.cs" />
     <Compile Include="Helpers\StringExtensions.cs" />
     <Compile Include="MagicStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
