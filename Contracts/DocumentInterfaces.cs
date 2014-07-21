@@ -31,6 +31,8 @@ namespace LightPaper.Infrastructure.Contracts
     public interface IDocumentsManager
     {
         ObservableCollection<IDocument> WorkingDocuments { get; }
+        IEnumerable<string> RecentlyClosedDocuments { get; }
+        string LastClosedDocument { get; }
         IDocument CurrentDocument { get; }
         bool Add(IDocument document, bool doSelect = false);
         void AddFromPaths(IEnumerable<string> filePaths);

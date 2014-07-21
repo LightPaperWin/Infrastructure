@@ -52,7 +52,7 @@
 
         public static class SettingsKey
         {
-            public static readonly string PREVIEW_THEME_KEY = "_previewTheme";
+            public static readonly string PREVIEW_DECORATOR_GUID = "_previewTheme";
         }
 
         #endregion
