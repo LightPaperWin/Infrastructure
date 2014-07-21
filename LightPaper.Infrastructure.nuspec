@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+    <metadata>
+        <id>LightPaper.Infrastructure</id>
+        <version>0.0.1-pre</version>
+        <authors>Ashok Gelal</authors>
+        <licenseUrl>https://github.com/LightPaper/Infrastructure/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/LightPaper/Infrastructure</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>The core of LightPaper for writing plugins and extensions.</description>
+        <copyright>Ashok Gelal</copyright>
+        <dependencies>
+            <dependency id="Puppy" version="0.0.2" />
+            <dependency id="AvalonEdit" version="5.0.1-pre" />
+            <dependency id="LightPaper.ResourceSatellite" version="0.0.1-pre" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="lib\LightPaper.Infrastructure.dll" target="lib\LightPaper.Infrastructure.dll" />
+    </files>
+</package>
