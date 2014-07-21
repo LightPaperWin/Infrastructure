@@ -64,7 +64,6 @@
             public static readonly string APP_FOLDER_NAME = "LightPaper";
             public static readonly string PLUGINS_FOLDER_NAME = "Plugins";
             public static readonly string MODULES_FOLDER_NAME = "Modules";
-            public static readonly string THEMES_FOLDER_NAME = "Themes";
         }
 
         #endregion
