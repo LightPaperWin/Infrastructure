@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Documents;
 using System.Windows.Input;
-using LightPaper.Infrastructure.Helpers;
+using LightPaper.ResourceSatellite.Properties;
 
 #endregion
 
@@ -29,8 +29,8 @@ namespace LightPaper.Infrastructure
             ApplicationCommands.Close.InputGestures.Add(new KeyGesture(Key.W, ModifierKeys.Control, "Ctrl+W"));
             EditingCommands.ToggleBold.InputGestures.Add(new KeyGesture(Key.B, ModifierKeys.Control, "Ctrl+B"));
             EditingCommands.ToggleItalic.InputGestures.Add(new KeyGesture(Key.L, ModifierKeys.Control, "Ctrl+I"));
-            EditingCommands.ToggleBold.Text = "_bold".Localize();
-            EditingCommands.ToggleItalic.Text = "_italic".Localize();
+            EditingCommands.ToggleBold.Text = StringResources._bold;
+            EditingCommands.ToggleItalic.Text = StringResources._italic;
         }
 
         #endregion
@@ -41,8 +41,8 @@ namespace LightPaper.Infrastructure
         {
             static Edit()
             {
-                PasteAsLinkCommand = new RoutedUICommand("_pasteAsLink".Localize(), "PasteAsLink", typeof (Commands));
-                PasteAsImageCommand = new RoutedUICommand("_pasteAsImage".Localize(), "PasteAsImage", typeof (Commands));
+                PasteAsLinkCommand = new RoutedUICommand(StringResources._pasteAsLink, "PasteAsLink", typeof (Commands));
+                PasteAsImageCommand = new RoutedUICommand(StringResources._pasteAsImage, "PasteAsImage", typeof (Commands));
             }
 
             public static RoutedUICommand PasteAsLinkCommand { get; private set; }
@@ -75,25 +75,25 @@ namespace LightPaper.Infrastructure
                 {
                     new KeyGesture(Key.K, ModifierKeys.Control, "Ctrl+K")
                 };
-                InlineCodeCommand = new RoutedUICommand("_inlineCode".Localize(), "InlineCode", typeof (Commands), inlineCodeGestures);
+                InlineCodeCommand = new RoutedUICommand(StringResources._inlineCode, "InlineCode", typeof (Commands), inlineCodeGestures);
 
                 var blockquoteGestures = new InputGestureCollection
                 {
                     new KeyGesture(Key.K, ModifierKeys.Control | ModifierKeys.Alt, "Ctrl+Alt+K")
                 };
-                BlockquoteCommand = new RoutedUICommand("_blockquote".Localize(), "Blockquote", typeof (Commands), blockquoteGestures);
+                BlockquoteCommand = new RoutedUICommand(StringResources._blockquote, "Blockquote", typeof (Commands), blockquoteGestures);
 
                 var linkGestures = new InputGestureCollection
                 {
                     new KeyGesture(Key.L, ModifierKeys.Control | ModifierKeys.Shift, "Ctrl+Shift+L")
                 };
-                LinkCommand = new RoutedUICommand("_link".Localize(), "Link", typeof (Commands), linkGestures);
+                LinkCommand = new RoutedUICommand(StringResources._link, "Link", typeof (Commands), linkGestures);
 
                 var imageGestures = new InputGestureCollection
                 {
                     new KeyGesture(Key.I, ModifierKeys.Control | ModifierKeys.Shift, "Ctrl+Shift+I")
                 };
-                ImageCommand = new RoutedUICommand("_image".Localize(), "Image", typeof (Commands), imageGestures);
+                ImageCommand = new RoutedUICommand(StringResources._image, "Image", typeof (Commands), imageGestures);
                 AddHeaderCommands();
             }
 
@@ -124,6 +124,7 @@ namespace LightPaper.Infrastructure
             #region Properties
 
             public static RoutedUICommand SaveAllCommand { get; private set; }
+            public static RoutedUICommand ExportAsHtmlCommand { get; private set; }
 
             #endregion
 
@@ -135,7 +136,8 @@ namespace LightPaper.Infrastructure
                 {
                     new KeyGesture(Key.S, ModifierKeys.Control | ModifierKeys.Shift, "Ctrl+Shift+S")
                 };
-                SaveAllCommand = new RoutedUICommand("_saveAll".Localize(), "SaveAll", typeof (Commands), saveAllGestures);
+                SaveAllCommand = new RoutedUICommand(StringResources._saveAll, "SaveAll", typeof (Commands), saveAllGestures);
+                ExportAsHtmlCommand = new RoutedUICommand(StringResources._exportAsHtml, "ExportAsHtml", typeof (Commands));
             }
 
             #endregion
@@ -163,19 +165,19 @@ namespace LightPaper.Infrastructure
                 {
                     new KeyGesture(Key.OemCloseBrackets, ModifierKeys.Control | ModifierKeys.Alt, "Ctrl+Alt+]")
                 };
-                TogglePreviewCommand = new RoutedUICommand("_togglePreview".Localize(), "TogglePreview", typeof (Commands), togglePreviewGestures);
+                TogglePreviewCommand = new RoutedUICommand(StringResources._togglePreview, "TogglePreview", typeof (Commands), togglePreviewGestures);
 
                 var toggleSidebarGestures = new InputGestureCollection
                 {
                     new KeyGesture(Key.OemOpenBrackets, ModifierKeys.Control | ModifierKeys.Alt, "Ctrl+Alt+[")
                 };
-                ToggleSidebarCommand = new RoutedUICommand("_toggleSidebar".Localize(), "ToggleSidebar", typeof (Commands), toggleSidebarGestures);
+                ToggleSidebarCommand = new RoutedUICommand(StringResources._toggleSidebar, "ToggleSidebar", typeof (Commands), toggleSidebarGestures);
 
                 var toggleQuickOptionsGestures = new InputGestureCollection
                 {
                     new KeyGesture(Key.OemComma, ModifierKeys.Control, "Ctrl+,")
                 };
-                ToggleQuickOptionsCommand = new RoutedUICommand("_toggleQuickOptions".Localize(), "ToggleQuickOptions", typeof (Commands), toggleQuickOptionsGestures);
+                ToggleQuickOptionsCommand = new RoutedUICommand(StringResources._toggleQuickOptions, "ToggleQuickOptions", typeof (Commands), toggleQuickOptionsGestures);
             }
 
             #endregion

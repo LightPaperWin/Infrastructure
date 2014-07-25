@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+    <metadata>
+        <id>LightPaper.Infrastructure</id>
+        <version>0.0.2-pre</version>
+        <authors>Ashok Gelal</authors>
+        <licenseUrl>https://github.com/LightPaper/ResourceSatellite/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/LightPaper/ResourceSatellite</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Localized strings for LightPaper</description>
+        <copyright>Ashok Gelal</copyright>
+    </metadata>
+</package>
