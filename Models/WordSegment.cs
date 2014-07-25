@@ -1,9 +1,15 @@
+#region Using
+
 using ICSharpCode.AvalonEdit.Document;
+
+#endregion
 
 namespace LightPaper.Infrastructure.Models
 {
     public class WordSegment : ISegment
     {
+        #region Constructors 
+
         public WordSegment(int offset, int length)
         {
             Offset = offset;
@@ -11,10 +17,15 @@ namespace LightPaper.Infrastructure.Models
             EndOffset = offset + length;
         }
 
-        public string Text { get; set; }
+        #endregion
 
+        #region Properties 
+
+        public string Text { get; set; }
         public int Offset { get; private set; }
         public int Length { get; private set; }
         public int EndOffset { get; private set; }
+
+        #endregion
     }
 }
