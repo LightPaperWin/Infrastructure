@@ -55,7 +55,7 @@ namespace LightPaper.Infrastructure.Helpers
             editor.EnsureParameterNotNull("editor");
             if (editor.Document == null)
             {
-                return new EmptyDocumentLine();
+                return EmptyDocumentLine.Empty();
             }
             var textView = editor.TextArea.TextView;
             return textView.GetDocumentLineByVisualTop(textView.ScrollOffset.Y);
