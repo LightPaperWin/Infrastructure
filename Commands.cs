@@ -161,23 +161,26 @@ namespace LightPaper.Infrastructure
 
             static Windows()
             {
+                var togglePreviewKeyGesture = new KeyGesture(Key.OemCloseBrackets, ModifierKeys.Control | ModifierKeys.Alt, "Ctrl+Alt+]");
                 var togglePreviewGestures = new InputGestureCollection
                 {
-                    new KeyGesture(Key.OemCloseBrackets, ModifierKeys.Control | ModifierKeys.Alt, "Ctrl+Alt+]")
+                    togglePreviewKeyGesture
                 };
-                TogglePreviewCommand = new RoutedUICommand(StringResources._togglePreview, "TogglePreview", typeof (Commands), togglePreviewGestures);
+                TogglePreviewCommand = new RoutedUICommand(string.Format("{0} ({1})", StringResources._togglePreview, togglePreviewKeyGesture.DisplayString), "TogglePreview", typeof (Commands), togglePreviewGestures);
 
+                var toggleSidebarKeyGesture = new KeyGesture(Key.OemOpenBrackets, ModifierKeys.Control | ModifierKeys.Alt, "Ctrl+Alt+[");
                 var toggleSidebarGestures = new InputGestureCollection
                 {
-                    new KeyGesture(Key.OemOpenBrackets, ModifierKeys.Control | ModifierKeys.Alt, "Ctrl+Alt+[")
+                    toggleSidebarKeyGesture
                 };
-                ToggleSidebarCommand = new RoutedUICommand(StringResources._toggleSidebar, "ToggleSidebar", typeof (Commands), toggleSidebarGestures);
+                ToggleSidebarCommand = new RoutedUICommand(string.Format("{0} ({1})", StringResources._toggleSidebar, toggleSidebarKeyGesture.DisplayString), "ToggleSidebar", typeof (Commands), toggleSidebarGestures);
 
+                var quickOptionsKeyGesture = new KeyGesture(Key.OemComma, ModifierKeys.Control, "Ctrl+,");
                 var toggleQuickOptionsGestures = new InputGestureCollection
                 {
-                    new KeyGesture(Key.OemComma, ModifierKeys.Control, "Ctrl+,")
+                    quickOptionsKeyGesture
                 };
-                ToggleQuickOptionsCommand = new RoutedUICommand(StringResources._toggleQuickOptions, "ToggleQuickOptions", typeof (Commands), toggleQuickOptionsGestures);
+                ToggleQuickOptionsCommand = new RoutedUICommand(string.Format("{0} ({1})", StringResources._toggleQuickOptions, quickOptionsKeyGesture.DisplayString), "ToggleQuickOptions", typeof (Commands), toggleQuickOptionsGestures);
             }
 
             #endregion
