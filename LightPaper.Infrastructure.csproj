@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="Commands.cs" />
     <Compile Include="Contracts\DocumentInterfaces.cs" />
+    <Compile Include="Contracts\PluginInterfaces.cs" />
     <Compile Include="Contracts\PreviewInterfaces.cs" />
     <Compile Include="Contracts\UserInteractionInterfaces.cs" />
     <Compile Include="Contracts\SessionInterfaces.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Events\Events.LightPaper.UI.cs" />
     <Compile Include="Helpers\DocumentExtensions.cs" />
     <Compile Include="Helpers\TextEditorHelpers.cs" />
+    <Compile Include="Helpers\UIExtensions.cs" />
     <Compile Include="MagicStrings.cs" />
     <Compile Include="Models\EmptyDocumentLine.cs" />
     <Compile Include="Models\WordSegment.cs" />
