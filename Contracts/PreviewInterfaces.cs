@@ -1,6 +1,7 @@
 ﻿#region Using
 
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 #endregion
 
@@ -17,5 +18,12 @@ namespace LightPaper.Infrastructure.Contracts
     public interface IPreviewDecoratorProvider
     {
         IEnumerable<IPreviewDecorator> PreviewDecorators { get; }
+    }
+
+    public interface IPreview
+    {
+        Task ExecuteJavascriptAsync(string script);
+        void UpdateHtml(string html);
+        void LoadHtml(string htmlString);
     }
 }
