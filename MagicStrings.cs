@@ -44,6 +44,7 @@
             public static readonly string MAIN_PREVIEW_CONTENT_REGION = "LPMainPreviewContentRegion";
             public static readonly string SECONDARY_MENU_CONTENT_REGION = "LPSecondaryMenuContentRegion";
             public static readonly string QUICK_OPTIONS_CONTENT_REGION = "LPQuickOptionsContentRegion";
+            public static readonly string PREVIEW_QUICK_OPTIONS_CONTENT_REGION = "LPPreviewQuickOptionsContentRegion";
         }
 
         #endregion
